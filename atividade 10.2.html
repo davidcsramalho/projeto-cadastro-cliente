@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>David Ramalho - Atividade 10 - 29/11/2023</title>
+    <center>
+        <h1>Formulário de Cadastro de Cliente</h1>
+    </center>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        h1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: blanchedalmond;
+            text-shadow: 0.1em 0.1em #ff0000
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://diplo-media.s3.eu-central-1.amazonaws.com/2023/08/11zon_resized-3.png');
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        form {
+            max-width: 70%;
+            margin: auto;
+            background-color: #716b6b;
+            opacity: 0.8;
+            padding: 50px;
+            border-radius: 25px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: flow-root;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: rgb(99, 255, 9);
+        }
+
+
+        input[type="text"],
+        textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+
+        select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 10px;
+            margin-bottom: 20px;
+        }
+
+        span {
+            display: inline-block;
+            margin-left: 10px;
+            color: #999;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+
+        <div class="col-md">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInputGrid" placeholder="João da Silva" value="">
+                <label for="floatingInputGrid">Nome Completo:</label>
+            </div>
+        </div>
+
+        <div class="row g-2">
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputGrid"
+                        placeholder="123.456.789-00 ou 12.345.678/0001-90" value="">
+                    <label for="floatingInputGrid">CPF ou CNPJ:</label>
+                </div>
+            </div>
+
+
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="(00)0000-0000" value="">
+                    <label for="floatingInputGrid">Telefone:</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-2">
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="Rua/Avenida/Alameda"
+                        value="">
+                    <label for="floatingInputGrid">Logradouro:</label>
+                </div>
+            </div>
+
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="0000" value="">
+                    <label for="floatingInputGrid">Nº</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-2">
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="" class="form-control" id="floatingInputGrid" placeholder="Centro" value="">
+                    <label for="floatingInputGrid">Bairro:</label>
+                </div>
+            </div>
+
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="Apto.01" value="">
+                    <label for="floatingInputGrid">Complemento:</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-2">
+            <div class="col-md">
+                <div class="form-floating">
+                    <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                        <option selected></option>
+                        <option value="1">Palmas</option>
+                        <option value="2">Gurupi</option>
+                        <option value="3">Araguaina</option>
+                        <option value="4">Porto Nacional</option>
+                        <option value="5">Paraiso</option>
+                    </select>
+                    <label for="floatingSelectGrid">Selecione a Cidade</label>
+                </div>
+            </div>
+
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="Próximo ao supermedao"
+                        value="">
+                    <label for="floatingInputGrid">Ponto de Referência:</label>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <label for="tipo_servico">Tipo de Serviço:</label>
+        <table>
+            <tr>
+                <td><input type="checkbox" id="limpeza" name="tipo_servico" value="limpeza"></td>
+                <td><label for="limpeza">Limpeza</label></td>
+                <td><input type="checkbox" id="formatacao" name="tipo_servico" value="formatacao">
+                </td>
+                <td><label for="formatacao">Formatação</label></td>
+                <td><input type="checkbox" id="upgrade" name="tipo_servico" value="upgrade"></td>
+                <td><label for="upgrade">Upgrade</label></td>
+            </tr>
+        </table><br>
+
+        <label for="equipamento">Equipamento:</label>
+        <table>
+            <tr>
+                <td><input type="radio" id="desktop" name="equipamento" value="desktop"></td>
+                <td><label for="desktop">Desktop</label></td>
+                <td><input type="radio" id="notebook" name="equipamento" value="notebook"></td>
+                <td><label for="notebook">Notebook</label></td>
+                <td><input type="radio" id="impressora" name="equipamento" value="impressora"></td>
+                <td><label for="impressora">Impressora/Multifuncional</label></td>
+            </tr>
+        </table>
+        <br><br>
+
+        <input type="submit" value="Enviar">
+        <input type="submit" value="Imprimir OS">
+    </form>
+</body>
+
+</html>
